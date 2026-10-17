@@ -1,16 +1,20 @@
 #include <stdio.h>
 #include <math.h>
 
-int dz33();
+void dz33(double x, double y, double *f);
 
 int main() {
-    dz33();
+    double x, y;
+     printf("Введите x и у: ");
+    scanf("%lf %lf", &x,&y);
+    double F;
+dz33(x, y, &F);
 }
 
-int dz33() {
-    double x = 2e-4, y = -0.003;
+void dz33(double x, double y, double *f) 
+{
     double t1 = y - sqrt(fabs(x));
-    double t2 = x - y / (1 + x*x/2);
-    double f = log(t1 * t2);
-    printf("результат: %.3f\n", f);
+    double t2 = x - y / (1 + x * x / 2);
+    *f = log(t1 * t2);
 }
+
