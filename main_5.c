@@ -2,15 +2,15 @@
 #define _USE_MATH_DEFINES 
 #define M_PI 3.14159265358979323846
 #include <math.h>
-void z1();
-void z2();
+int z1();
+int z2();
 int main()
 {
 z1();
 z2();
 }
 
-void z1()
+int z1()
 {
     printf("71 задание\n");
 double gr,r;
@@ -19,7 +19,7 @@ scanf("%lf", &gr);
 r=sin(gr*M_PI/180.0);
 printf("%.6f",r);
 }
-void z2()
+int z2()
 {
     printf("\n2-3 задания\n");
     double y,x,a,b,k=8.2;
